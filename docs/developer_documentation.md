@@ -52,10 +52,10 @@ The ECS framework consists of three main components:
 
 ## 3. Architectural Overview
 - ECS Architecture FlowChart
-![Flowchart](https://github.com/ErikNoren05/rock_papper_scissor_game_ECS/blob/main/assets/classdiagram_system_architecture.PNG)
+![Flowchart](https://github.com/Gurrachu675/LitetKortFightingSpel/blob/master/assets/System_architecture.PNG)
 
 - Game Loop Sequence Diagram
-![Flowchart](https://github.com/ErikNoren05/rock_papper_scissor_game_ECS/blob/main/assets/FlowChart.PNG)
+![Flowchart](https://github.com/Gurrachu675/LitetKortFightingSpel/blob/master/assets/FlowChart.PNG)
 
 
 ### 3.1. Entity Class
