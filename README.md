@@ -120,5 +120,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- This project was inspired by introductory game development concepts.
-- Thanks to [OpenAI](https://openai.com/) for providing tools and resources for AI-powered assistance.
+- This project was inspired by text RPGs
