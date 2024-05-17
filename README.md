@@ -107,56 +107,6 @@ class Game
     }
 }
 ```
-# Game System Readme
-
-This repository contains a simple console-based game system implemented in C#. The system comprises several components and systems to simulate basic gameplay mechanics such as health management, combat, and user interaction.
-
-## Components
-
-### HealthComponent
-- **Properties**:
-  - `Health`: Represents the current health points of an entity.
-
-### SwordComponent
-- **Properties**:
-  - `Damage`: Indicates the amount of damage inflicted by a sword wielded by an entity.
-
-### NameComponent
-- **Properties**:
-  - `Name`: Stores the name of an entity.
-
-### HealthPotionComponent
-- **Properties**:
-  - `RegenAmount`: Specifies the amount of health restored by a health potion.
-
-### InputComponent
-- **Properties**:
-  - `Input`: Stores user input during gameplay.
-
-## Systems
-
-### HealthSystem
-- **Methods**:
-  - `TakeDamage(Entity entity, Entity monsterEntity)`: Reduces the health of an entity based on the damage inflicted by a monster entity.
-  - `HealHealth(Entity entity)`: Restores the health of an entity using a health potion.
-  - `CheckHealth(Entity entity)`: Checks if an entity's health has dropped to zero or below, indicating death.
-
-### PlaySystem
-- **Methods**:
-  - `input(Entity entity)`: Captures user input during gameplay.
-  - `SetName(Entity entity, Entity inputEntity)`: Sets the name of an entity based on user input.
-  - `SetUp(Entity entity, int health, int swordDamage)`: Initializes the health and sword damage of an entity.
-
-## Usage
-
-1. Instantiate necessary systems: `HealthSystem` and `PlaySystem`.
-2. Create player and monster entities using the `Entity` class.
-3. Add required components to entities using the `AddComponent` method.
-4. Initialize player entity's name and attributes using `SetNam`e and `SetUp` methods respectively.
-5. Start the main game loop, where players encounter monsters and engage in combat.
-6. During combat, players can choose to attack or defend. Damage is calculated based on sword damage and health points.
-7. The game continues until the player decides to stop or the player's health drops to zero.
-
 ## Features
 
 - Basic health management system.
