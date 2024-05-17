@@ -1,134 +1,9 @@
-﻿using System;
+using System;
+using Systems;
+using components;
+using Entitys;
 using System.Collections.Generic;
-
-
-
-    public class HealthComponent
-    {
-        public int Health { get; set; }
-    }
-
-    public class SwordComponent
-    {
-        public int damage { get; set; }
-    }
-
-    public class NameComponent 
-
-    {
-        public string name { get; set; }
-    }
-
-    public class HealthPotionComponent
-    {
-        public int regenAmount { get; set; } 
-    }
-    
-    public class InputComponent 
-    {
-        public string Input { get; set; }
-    }
-
-
-public class Entity
-{
-    public int Id { get; }
-    private Dictionary<Type, object> components = new Dictionary<Type, object>();
-    public Entity(int id)
-    {
-        Id = id;
-    }
-    public void AddComponent<T>(T component)
-    {
-        components[typeof(T)] = component;
-    }
-    public T GetComponent<T>() where T : class
-    {
-        if (components.TryGetValue(typeof(T), out var component))
-        {
-            return component as T;
-        }
-        return null;
-    }
-}
-public class HealthSystem 
-{
-    public void TakeDamage(Entity entity, Entity monsterEntity)
-    {
-        var healthComponent = entity.GetComponent<HealthComponent>();
-        var swordComponent = monsterEntity.GetComponent<SwordComponent>();
-
-        if (healthComponent != null)
-        {
-            healthComponent.Health -= swordComponent.damage;
-        }
-    }
-
-    public void HealHealth(Entity entity)
-    {
-        var healthComponent = entity.GetComponent<HealthComponent>();
-        var healthPotionComponent = entity.GetComponent<HealthPotionComponent>();
-        if (healthComponent != null)
-        {
-            healthComponent.Health += healthPotionComponent.regenAmount;
-        }
-    }
-
-    public bool CheckHealth(Entity entity)
-    {
-        var healthComponent = entity.GetComponent<HealthComponent>(); 
-        if (healthComponent.Health <= 0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
-}
-
-
-public class PlaySystem
-{
-    public void input(Entity entity)
-    {
-        var inputComponent = entity.GetComponent<InputComponent>();
-
-        if (inputComponent != null)
-        {
-            inputComponent.Input = Console.ReadLine();
-        }
-
-
-    }
-
-    public void SetName(Entity entity, Entity inputEntity)
-    {
-        var nameComponent = entity.GetComponent<NameComponent>();
-        var inputComponent = inputEntity.GetComponent<InputComponent>();
-
-        Console.WriteLine("what is your name");
-        input(inputEntity);
-        nameComponent.name = inputComponent.Input;
-        Console.WriteLine(nameComponent.name);
-
-
-
-
-    }
-
-    public void SetUp(Entity entity, int health, int swordDamage)
-    {
-        var healthComponent = entity.GetComponent<HealthComponent>();
-        var swordComponent = entity.GetComponent<SwordComponent>();
-
-        healthComponent.Health = health;
-        swordComponent.damage = swordDamage;
-
-    }
-
-}
+using System.Reflection.Metadata.Emcma335;
 
 class game
 {
@@ -219,3 +94,4 @@ class game
 
     }
 }
+
