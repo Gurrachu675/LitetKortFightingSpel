@@ -51,6 +51,12 @@ The ECS framework consists of three main components:
 - **PlaySystem**: Implements gameplay mechanics including player input handling and game setup.
 
 ## 3. Architectural Overview
+- ECS Architecture FlowChart
+![Flowchart](https://github.com/ErikNoren05/rock_papper_scissor_game_ECS/blob/main/assets/classdiagram_system_architecture.PNG)
+
+- Game Loop Sequence Diagram
+![Flowchart](https://github.com/ErikNoren05/rock_papper_scissor_game_ECS/blob/main/assets/flowshart.PNG)
+
 
 ### 3.1. Entity Class
 
